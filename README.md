@@ -36,9 +36,13 @@ You need to write code which would:
 2. Print in console the weather for the city located at lat/long = 51.5074 and 0.1278
 3. Print in console in one line the weather and currency for a given city (London)
 
+---
+
 ### **Answer**
 
 **You may find all the answers for this task on the [`task-2.js`](answers/task-2.js) file**
+
+---
 
 </br>
 
@@ -63,6 +67,16 @@ should include the following points:
    - Short description of API – URI, format, why needed
    - Framework
    - Any other comments and suggestions
+
+</br>
+
+---
+
+### **Answer**
+
+**You can find the answer for this task in [`task-3.md`](answers/task-3.md)**
+
+---
 
 </br>
 
@@ -104,6 +118,18 @@ This code should return after 2 seconds with the object: `{ title: 'Error page',
 
 - Provide the code and the code demonstrating how to run it
 
+---
+
+### **Answer**
+
+**You may find the running code for this task on the [`task-4.js`](answers/task-4.js) file.**
+
+**You can run it with NodeJS installed globally with `node answers/task-4.js`**
+
+---
+
+</br>
+
 ## **Task 5**
 
 You are mid/senior developer in some big long-term project A. You will be participating in this
@@ -126,37 +152,38 @@ Here will be the code from the junior developer. Please make code review (take i
 only the first of multiple future code reviews):
 
 ```
-  import React, { useEffect, useState } from 'react';
+01:  import React, { useEffect, useState } from 'react';
+02:
+03:  function App() {
+04:
+05:      var [fuel, setFeul] = useState(0);
+06:      var [alertText, setAlertTxt] = useState('Processing...');
+07:
+08:      useEffect(() => {
+09:        fetch('https://new.world.com/fleet/121')
+10:          .then(response => response.json())
+11:          .then(json => {
+12:            setFeul(json);
+13:            console.log(json);
+14:          })
+15:      });
+16:
+17:      useEffect(() => {
+18:        if (!fuel) setAlertTxt('Processing...'); else
+19:        if (fuel.litres > 0) setAlertTxt('Need to buy more fuel'); else
+20:        setAlertTxt('All is fine');
+21:      }, [fuel])
+22:
+23:      return (
+24:        <div>
+25:          <h1 style={alertText == 'Need to buy more fuel'? {color:"red"}:{}}>{alertText}</h1>
+26:        </div>
+27:      );
+28:
+29:  }
+30:
+31:  export default App;
 
-  function App() {
-
-      var [fuel, setFeul] = useState(0);
-      var [alertText, setAlertTxt] = useState('Processing...');
-
-      useEffect(() => {
-        fetch('https://new.world.com/fleet/121')
-          .then(response => response.json())
-          .then(json => {
-            setFeul(json);
-            console.log(json);
-          })
-      });
-
-      useEffect(() => {
-        if (!fuel) setAlertTxt('Processing...'); else
-        if (fuel.litres > 0) setAlertTxt('Need to buy more fuel'); else
-        setAlertTxt('All is fine');
-      }, [fuel])
-
-      return (
-        <div>
-          <h1 style={alertText == 'Need to buy more fuel'? {color:"red"}:{}}>{alertText}</h1>
-        </div>
-      );
-
-  }
-
-  export default App;
 ```
 
 ### To-do:
