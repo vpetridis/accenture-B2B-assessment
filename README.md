@@ -133,14 +133,22 @@ This code should return after 2 seconds with the object: `{ title: 'Error page',
 ## **Task 5**
 
 You are mid/senior developer in some big long-term project A. You will be participating in this
-project for a long time. During the Scrum planning there was the following user story: As external
-portal user When I open external portal and the portal has widget from the project’s A Then I should
-see red alert if the amount of fuel consumed by cars in the fleet with id=121 more than 10k litres
-during current month.
+project for a long time. During the Scrum planning there was the following user story:
+
+As external portal user.
+
+When I open external portal and the portal has widget from the project’s A Then I should see red
+alert if the amount of fuel consumed by cars in the fleet with id=121 more than 10k litres during
+current month.
 
 The information about the amount of litres will be receive through the following endpoint:
 https://new.world.com/fleet/121 With the contract:
-`{ “id”: number, //id of the fleet “litres”: number, //the amount of fuel consumed by fleet }`
+
+```
+{ “id”: number, //id of the fleet,
+ “litres”: number, //the amount of fuel consumed by fleet 
+ }
+```
 
 Later our PO (product owner, who is sales consultant in other department) want to add some more
 features to that widget and make it more customizable. But it will be much later. You agreed that
@@ -193,10 +201,12 @@ Please provide comments to the junior in the following format:
 - Line number;
 - Comment.
 
+</br>
+
+---
 
 ### **Answer**
 
-**You may find the code review code for this task in [`task-5.js`](answers/task-5.md) file.**
-
+**You may find the code review in the [`task-5.js`](answers/task-5.md) file.**
 
 ---
