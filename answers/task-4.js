@@ -23,9 +23,10 @@ const handleError = (e) => {
   }
 };
 
+/* Note: this task can also be executed with a reducer function
+but for loops work better with async operations. */
 const getProcessingPage = async (args = [{ state: "", errorCode: nullI }]) => {
   let temp = { title: "", message: null };
-  // I have left the logs for you to examine the various states being passed as arguments.
   for (const s of args) {
     const { state } = s;
     if (state === en.processing) {
@@ -62,7 +63,6 @@ const initialState = [
 
 /* For demonstration purposes, I am logging the currentState
  but you can save it in a variable, globally or locally */
-
 getProcessingPage(initialState).then((currentState) =>
   console.log("---- CURRENT STATE :", currentState)
 );
