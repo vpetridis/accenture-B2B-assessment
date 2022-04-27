@@ -192,3 +192,11 @@ Please provide comments to the junior in the following format:
 
 - Line number;
 - Comment.
+
+
+### **Answer**
+
+**You may find the code review code for this task in [`task-5.js`](answers/task-5.md) file.**
+
+
+---
