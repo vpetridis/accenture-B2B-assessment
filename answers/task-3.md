@@ -123,15 +123,6 @@ a simple component will have these files:
   Profile on other pages as a child component we will definitely refactor it and create a separate
   component called `SingleProfile` inside the `components` folder**.
 
-For a two page application
-
-- Directory structure for source code folder
-- List of components which you’ll implement (with short description)
-- For one of the components also provide in which directory/-ies component’s file/-es will be
-  located
-- Benefits/drawbacks comparing with traditional (not-SPA) app approach
-- Any other comments and suggestions
-
 ### Benefits/drawbacks comparing with traditional (not-SPA) app approach
 
 This application can scale nicely with more functionality. It can load very fast on each API request
